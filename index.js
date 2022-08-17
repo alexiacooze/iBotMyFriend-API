@@ -15,6 +15,6 @@ app.post("/:input", async (request, response) => {
   response.json(json);
 });
 
-app.listen(8080, () => {
-  console.log("Listening on 8080");
+app.listen(3000, () => {
+  console.log("Listening on 3000");
 });
