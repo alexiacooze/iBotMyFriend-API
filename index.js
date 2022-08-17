@@ -1,7 +1,9 @@
 import express from "express";
 const app = express();
 import cors from "cors";
+require('dotenv').config()
 import fetch from "node-fetch";
+const PORT = process.env.PORT || 8080;
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -15,6 +17,6 @@ app.post("/:input", async (request, response) => {
   response.json(json);
 });
 
-app.listen(3000, () => {
-  console.log("Listening on 3000");
+app.listen(PORT, () => {
+  console.log(`Listening on ${PORT}`);
 });
